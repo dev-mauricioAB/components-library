@@ -11,7 +11,7 @@ export const HomeView: React.FC = () => {
         <h1>Home View in Components Library</h1>
       </section>
 
-      <Footer />
+      <Footer title="Footer in components-library" />
     </main>
   );
 };
