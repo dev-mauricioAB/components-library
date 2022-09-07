@@ -5,8 +5,7 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   devtool: "source-map",
   output: {
-    publicPath:
-      "https://components-library-git-develop-dev-mauricioab.vercel.app/",
+    publicPath: "auto",
   },
 
   resolve: {
