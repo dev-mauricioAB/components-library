@@ -5,6 +5,10 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   devtool: "source-map",
 
+  optimization: {
+    runtimeChunk: false,
+  },
+
   output: {
     publicPath: "auto",
   },
