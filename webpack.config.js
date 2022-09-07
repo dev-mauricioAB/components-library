@@ -10,7 +10,7 @@ module.exports = {
   },
 
   output: {
-    publicPath: "auto",
+    publicPath: "https://components-library-react.vercel.app/",
   },
 
   resolve: {
