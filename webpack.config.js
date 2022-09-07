@@ -5,8 +5,12 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   devtool: "source-map",
 
+  optimization: {
+    runtimeChunk: false,
+  },
+
   output: {
-    publicPath: "auto",
+    publicPath: "https://components-library-react.vercel.app/",
   },
 
   resolve: {
