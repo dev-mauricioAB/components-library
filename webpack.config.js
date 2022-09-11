@@ -41,6 +41,10 @@ module.exports = {
     ],
   },
 
+  optimization: {
+    runtimeChunk: "single",
+  },
+
   plugins: [
     new ModuleFederationPlugin({
       name: "components_library",
