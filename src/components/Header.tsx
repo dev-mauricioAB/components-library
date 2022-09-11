@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-interface HeaderProps {
-  title: string;
-  clickLogo?: () => void;
-}
+import { HeaderProps } from "../models/header-model";
 
-export const Header: React.FC<HeaderProps> = ({ title, clickLogo }) => {
+export const Header: React.FC<HeaderProps> = ({
+  title,
+  clickLogo,
+  actionLinks,
+}) => {
   return (
     <div>
       <header className="px-4 py-2 bg-blue-100 flex justify-between items-center">
@@ -21,15 +22,32 @@ export const Header: React.FC<HeaderProps> = ({ title, clickLogo }) => {
         <section>
           <div className="text-xl">{title} :)</div>
         </section>
-        <section v-if="navItems">
-          <nav>
-            <ul className="flex">
-              <li className="mr-6">
-                <a className="text-gray-400 cursor-not-allowed">Clic loco</a>
-              </li>
-            </ul>
-          </nav>
-        </section>
+
+        {actionLinks?.length && actionLinks?.length > 0 && (
+          <section v-if="navItems">
+            <nav className="flex justify-end">
+              {actionLinks.map(({ label, onClick, enabled }, index) => (
+                <ul className="flex" key={index}>
+                  <li className="mr-6">
+                    <a
+                      className={`
+                        ${
+                          enabled
+                            ? "text-black cursor-pointer hover:text-gray-700 trasition"
+                            : "text-gray-400 cursor-not-allowed"
+                        }
+                        
+                      `}
+                      onClick={enabled ? onClick : () => {}}
+                    >
+                      {label}
+                    </a>
+                  </li>
+                </ul>
+              ))}
+            </nav>
+          </section>
+        )}
       </header>
     </div>
   );
