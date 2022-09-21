@@ -22,7 +22,7 @@ export const Footer: React.FC<FooterProps> = ({ title }) => {
             <nav>
               <ul className="flex">
                 <li className="mr-6">
-                  <a className="text-gray-400 cursor-not-allowed">Laia</a>
+                  <a className="text-gray-400 cursor-not-allowed">One Button</a>
                 </li>
               </ul>
             </nav>
