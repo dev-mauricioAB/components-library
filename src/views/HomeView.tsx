@@ -25,7 +25,7 @@ export const HomeView: React.FC = () => {
     <main>
       <Header title="Header in components library" actionLinks={actionLinks} />
 
-      <section>
+      <section className="m-10">
         <h1>Home View in Components Library</h1>
       </section>
 
