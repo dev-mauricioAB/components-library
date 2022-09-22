@@ -6,7 +6,7 @@ module.exports = {
   devtool: "source-map",
 
   output: {
-    publicPath: "auto",
+    publicPath: "https://components-library-react.vercel.app/",
   },
 
   resolve: {
